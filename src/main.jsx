@@ -4,10 +4,15 @@ import ReactDOM from 'react-dom/client'
 
 
 import './styles.css'
-import { HomePage } from './Pages/HomePage'
+import { BrowserRouter } from 'react-router-dom';
+import { Navbar } from './Components';
+import { AppRouter } from './router/AppRouter';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HomePage />
+    <BrowserRouter>
+      <Navbar/>
+      <AppRouter />
+    </BrowserRouter>
   </React.StrictMode>,
 )
