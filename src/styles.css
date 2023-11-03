@@ -1,0 +1,33 @@
+/* Registration Page */
+
+.Regis_divTitle{
+    border: 3px solid black;
+    border-radius: 30px;
+    margin: 10px 40px;
+}
+
+.Regis_title{
+    text-align: center;
+    font-family: 'Tahoma';
+    text-decoration: underline;
+    color: brown;
+}
+.Regis_subtitle{
+    text-align: center;
+    font-family: 'Tahoma';
+    text-decoration: underline;
+    color: black;
+}
+
+.Regis_divForm{
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 40px 40px;
+}
+.Regis_check{
+
+    display: block;
+}
+
+/* FIN Registration Page */
