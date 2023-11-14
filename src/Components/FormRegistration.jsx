@@ -4,6 +4,7 @@ const initialForm = {
     nombre: "",
     apellidos: "",
     correo: "",
+    correo2:"",
     telefono: "",
     dni: "",
     ciudad: "",
@@ -21,66 +22,98 @@ const initialForm = {
     otras: false,
     otrasAlergias: "",
     noAlergias: true,
-    comentarios: ""
+    comentarios: "",
+    leyProtect: false,
+    grupoWha: false,
 };
 
 export const FormRegistration = () => {
 
-    const { formState, onInputChange, onResetForm, onCheckChange, onCheckChangeValue, onCheckChangeAlergias, onCheckChangeOther,
-        nombre, apellidos, correo, telefono, dni, ciudad, org, hotel, dia25, dia26, cena, plato, comentarios, noAlergias, otrasAlergias}
+    const { formState, onInputChange, onResetForm, onCheckChange, onCheckChangeValue, onCheckChangeAlergias, onCheckChangeOther, onInputChangeNumber,
+        nombre, apellidos, correo,correo2, telefono, dni, ciudad, org, hotel, dia25, dia26, cena, plato, comentarios, noAlergias, otrasAlergias, leyProtect, grupoWha}
          = useForm(initialForm);
 
+         const handlechangeDisabled = (e) => {
+            e.preventDefault();
+          };
 
+        const onSubmit = (e) => {
+
+            if (correo !== correo2) {
+                alert("El correo de confirmación no coincide con el primer correo");
+                e.preventDefault();
+
+            }
+            if(!dia25 && !dia26){
+                alert("Tienes que seleccionar al menos un dia de aistencia")
+                e.preventDefault();
+            }
+            if(!leyProtect){
+                alert("Tienes que aceptar las condiciones de inscripción")
+                e.preventDefault();
+            }
+
+        };
 
   return (
     <>
-        <div className=" row Regis_divForm">
+        <form className=" row needs-validation Regis_divForm " onSubmit={(e) =>onSubmit(e)}  >
             <div className="col-md-12 mt-3 ">
                     <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
                                                      {/* Nombre */}
             <div className="col-md-4 mt-4">
-                <div className="form-floating">
-                    <input type="text" name="nombre" value={nombre} className="form-control" id="floatingInput" onChange={onInputChange}/>
+                <div className="form-floating was-validated">
+                    <input type="text" name="nombre" value={nombre} className="form-control" id="floatingInput" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*Nombre</label>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
+
                 </div>
             </div>
             <div className="col-md-8 mt-4">
-                <div className="form-floating">
-                    <input type="text" className="form-control" id="floatingInput" value={apellidos} name="apellidos" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="text" className="form-control" id="floatingInput" value={apellidos} name="apellidos" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*Apellidos</label>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
                                                         {/* Correo */}
+
             <div className="col-md-6 mt-4">
-                <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" value={correo} name="correo" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="email" className="form-control " id="floatingInput" value={correo} name="correo" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*Correo electrónico</label>
+                    <div className="valid-feedback">Todo bien</div>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
             <div className="col-md-6 mt-4">
-                <div className="form-floating">
-                    <input type="email" className="form-control" id="floatingInput" name="correo2" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="email" className="form-control" id="floatingInput" value={correo2} onPaste={handlechangeDisabled} name="correo2" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*Repetir correo</label>
+                    <div className="invalid-feedback">Debe confirmar el correo</div>
                 </div>
             </div>
                                                         {/* Telefono + DNI + Ciudad */}
             <div className="col-md-4 mt-4">
-                <div className="form-floating">
-                    <input type="num" className="form-control" id="floatingInput" value={telefono} name="telefono" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="text" className="form-control" id="floatingInput" value={telefono} name="telefono" onChange={onInputChangeNumber} required/>
                     <label htmlFor="floatingInput">*Teléfono de contacto</label>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
             <div className="col-md-4 mt-4">
-                <div className="form-floating">
-                    <input type="text" className="form-control" id="floatingInput" value={dni} name="dni" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="text" className="form-control" id="floatingInput" value={dni} name="dni" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*DNI</label>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
             <div className="col-md-4 mt-4">
-                <div className="form-floating">
-                    <input type="text" className="form-control" id="floatingInput" value={ciudad} name="ciudad" onChange={onInputChange} />
+                <div className="form-floating was-validated">
+                    <input type="text" className="form-control" id="floatingInput" value={ciudad} name="ciudad" onChange={onInputChange} required/>
                     <label htmlFor="floatingInput">*Ciudad Perteneciente</label>
+                    <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
                                                      {/* Organización + Hotel + Dia asistenia  */}
@@ -112,40 +145,43 @@ export const FormRegistration = () => {
                 </div>
             </div>
                                                      {/* Cena de gala */}
-            <div className="col-md-12 mt-3">
-                <p>* Inscripción para la cena de gala dia 25 de Abril, con precio 49€/persona, ingresar a cuenta: 561964968498498498 con el concepto: "Cena de gala" + el nombre.
-                    Aforo limitado, se respetara estrictamente el orden de inscripción.  <a href="http://">Ver carta de cena</a>.
-                </p>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={cena === 'si'} onChange={(t) => onCheckChangeValue('si',t)} name="cena" id="flexCheckDefault"/>
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
-                        Si
-                    </label>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={cena === 'no'} onChange={(t) => onCheckChangeValue('no',t)} name="cena" id="flexCheckChecked" />
-                    <label className="form-check-label" htmlFor="flexCheckChecked">
-                        No
-                    </label>
-                </div>
-            </div>
-                                        {/* Incorporar aqui en lo siguiente que se muestre o no si acepta cena de gala */}
-            <div className="col-md-12 mt-3">
-                <p>* Para la cena de gala, ¿que prefiere de plato principal?</p>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={plato === 'carne'} onChange={(t) => onCheckChangeValue('carne',t)} name="plato" id="flexCheckDefault"/>
-                    <label className="form-check-label" htmlFor="flexCheckDefault">
-                        Carne
-                    </label>
-                </div>
-                <div className="form-check">
-                    <input className="form-check-input" type="checkbox" checked={plato === 'pescado'} onChange={(t) => onCheckChangeValue('pescado',t)} name="plato" id="flexCheckChecked" />
-                    <label className="form-check-label" htmlFor="flexCheckChecked">
-                        Pescado
-                    </label>
-                </div>
-            </div>
 
+                    <div className="col-md-12 mt-3">
+                        <p>* Inscripción para la cena de gala dia 25 de Abril, con precio 49€/persona, ingresar a cuenta: 561964968498498498 con el concepto: "Cena de gala" + el nombre.
+                            Aforo limitado, se respetara estrictamente el orden de inscripción.  <a href="http://">Ver carta de cena</a>.
+                        </p>
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" checked={cena === 'si'} onChange={(t) => onCheckChangeValue('si',t)} name="cena" id="flexCheckDefault"/>
+                            <label className="form-check-label" htmlFor="flexCheckDefault">
+                                Si
+                            </label>
+                        </div>
+                        <div className="form-check">
+                            <input className="form-check-input" type="checkbox" checked={cena === 'no'} onChange={(t) => onCheckChangeValue('no',t)} name="cena" id="flexCheckChecked" />
+                            <label className="form-check-label" htmlFor="flexCheckChecked">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    {
+                        cena==="si"
+                        ? <div className="col-md-12 mt-3">
+                            <p>* Para la cena de gala, ¿que prefiere de plato principal?</p>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" checked={plato === 'carne'} onChange={(t) => onCheckChangeValue('carne',t)} name="plato" id="flexCheckDefault"/>
+                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                 Carne
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="checkbox" checked={plato === 'pescado'} onChange={(t) => onCheckChangeValue('pescado',t)} name="plato" id="flexCheckChecked" />
+                                <label className="form-check-label" htmlFor="flexCheckChecked">
+                                    Pescado
+                                </label>
+                            </div>
+                        </div>
+                        :""
+                    }
                                            {/* Intolerancias */}
             <div className="col-md-12 mt-3">
                 <p>¿Alguna intorelancia o alergia alimentaria?</p>
@@ -201,26 +237,26 @@ export const FormRegistration = () => {
                         {/* Proteccion de datos bla bla bla*/}
             <div className="col-md-12 mt-3">
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                    <input className="form-check-input" type="checkbox" onChange={onCheckChange} checked={leyProtect} name="leyProtect" id="flexCheckDefault" required/>
                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                    <p>Acepta la proteccion de datos bla bla bla aqui habra que poner el tipico texto de la ley sobre la proteccion de datos
+                    <p>* Acepta la proteccion de datos bla bla bla aqui habra que poner el tipico texto de la ley sobre la proteccion de datos
                     que solo seran datos privados y para llevar el control de inscripciones </p>
                     </label>
                 </div>
              </div>
              <div className="col-md-12 mt-3">
                 <div className="form-check">
-                    <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+                    <input className="form-check-input" type="checkbox" onChange={onCheckChange} name="grupoWha" checked={grupoWha} id="flexCheckDefault"/>
                     <label className="form-check-label" htmlFor="flexCheckDefault">
                     <p>Quiere que le informemos de nuevas actualizaciones sobre la asamblea, añadiendo su número de contacto al grupo de whatsapp</p>
                     </label>
                 </div>
              </div>
              <div className="col-md-12 mt-3 ">
-                <button type="button" className="btn btn-outline-primary m-2">Enviar formulario</button>
+                <button type="submit" className="btn btn-outline-primary m-2">Enviar formulario</button>
                 <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
-         </div>
+         </form>
     </>
   )
 }
