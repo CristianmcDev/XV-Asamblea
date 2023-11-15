@@ -35,17 +35,16 @@ export const FormRegistration = () => {
 
                 emailjs.sendForm('service_41n3gnu', 'template_wam2vsc', form.current, 'jeuAuNOzO1TudrGpv')
                 .then((result) => {
-                    console.log(result.text);
+                    alert("Inscripción enviada correctamente, se le enviara un correo de confirmación lo antes posible");
                 }, (error) => {
-                    console.log(error.text);
+                    alert("Problema con el envio ", error);
                 });
             }
-
         };
 
   return (
     <>
-        <form className=" row needs-validation Regis_divForm " ref={form} onSubmit={(e) =>onSubmit(e)}  >
+        <form className=" row needs-validation Regis_divForm " ref={form} onSubmit={(e) =>onSubmit(e)}>
             <div className="col-md-12 mt-3 ">
                     <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
@@ -241,7 +240,7 @@ export const FormRegistration = () => {
                 </div>
              </div>
              <div className="col-md-12 mt-3 ">
-                <button type="submit" className="btn btn-outline-primary m-2">Enviar formulario</button>
+                <button type="submit" className="btn btn-outline-primary m-2">Enviar inscrpción</button>
                 <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
          </form>
