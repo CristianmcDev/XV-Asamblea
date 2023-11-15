@@ -26,6 +26,20 @@ export const useForm = ( initialForm = {}) => {
 
     };
 
+    const onCheckChangeValue = ({ target }) => {
+      const { name, checked } = target;
+
+      if (name === "cenaSi" && checked) {
+      setFormState({...formState, [ name ]: checked, cenaNo: false, carne: true});
+      }else if(name === "cenaNo" && checked){
+      setFormState({...formState, [ name ]: checked, cenaSi: false, carne: false, pescado: false});
+      }else if(name === "pescado" && checked){
+        setFormState({...formState, [ name ]: checked, carne: false});
+      }else if(name === "carne" && checked){
+        setFormState({...formState, [ name ]: checked, pescado: false});
+      }
+    };
+
 
     const onCheckChangeAlergias = ({ target }) => {
       const { name, checked } = target;
@@ -63,16 +77,6 @@ export const useForm = ( initialForm = {}) => {
       setFormState({...formState, [ name ]: checked, otrasAlergias: ""})
      };
     }
-
-    const onCheckChangeValue = (option,{target}) => {
-      const name = target.name;
-
-      if (option==="no") {
-        setFormState({...formState, [name]: option, plato:""})
-      }else{
-        setFormState({...formState, [name]: option})
-      }
-    };
 
     const onResetForm = () => {
       document.getElementsByName("gluten")[0].checked= false;

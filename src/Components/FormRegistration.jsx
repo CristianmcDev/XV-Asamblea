@@ -1,41 +1,20 @@
+import emailjs from "@emailjs/browser";
+import { initialForm } from "../data/initialRegis";
 import { useForm } from "../hooks/useForm";
+import { useRef } from "react";
 
-const initialForm = {
-    nombre: "",
-    apellidos: "",
-    correo: "",
-    correo2:"",
-    telefono: "",
-    dni: "",
-    ciudad: "",
-    org: "",
-    hotel: "",
-    dia25: false,
-    dia26: false,
-    cena: "no",
-    plato: "",
-    gluten: false,
-    huevo: false,
-    lactosa: false,
-    marisco: false,
-    frutossecos: false,
-    otras: false,
-    otrasAlergias: "",
-    noAlergias: true,
-    comentarios: "",
-    leyProtect: false,
-    grupoWha: false,
-};
 
 export const FormRegistration = () => {
 
-    const { formState, onInputChange, onResetForm, onCheckChange, onCheckChangeValue, onCheckChangeAlergias, onCheckChangeOther, onInputChangeNumber,
-        nombre, apellidos, correo,correo2, telefono, dni, ciudad, org, hotel, dia25, dia26, cena, plato, comentarios, noAlergias, otrasAlergias, leyProtect, grupoWha}
+    const { onInputChange, onResetForm, onCheckChange, onCheckChangeValue, onCheckChangeAlergias, onCheckChangeOther, onInputChangeNumber,
+        nombre, apellidos, correo,correo2, telefono, dni, ciudad, org, hotel, dia25, dia26, cenaSi, cenaNo, carne, pescado, comentarios, noAlergias, otrasAlergias, leyProtect, grupoWha,}
          = useForm(initialForm);
+
+         const form = useRef();
 
          const handlechangeDisabled = (e) => {
             e.preventDefault();
-          };
+        };
 
         const onSubmit = (e) => {
 
@@ -43,21 +22,30 @@ export const FormRegistration = () => {
                 alert("El correo de confirmación no coincide con el primer correo");
                 e.preventDefault();
 
-            }
+            }else
             if(!dia25 && !dia26){
                 alert("Tienes que seleccionar al menos un dia de aistencia")
                 e.preventDefault();
-            }
+            }else
             if(!leyProtect){
                 alert("Tienes que aceptar las condiciones de inscripción")
                 e.preventDefault();
+            }else{
+                e.preventDefault();
+
+                emailjs.sendForm('service_41n3gnu', 'template_wam2vsc', form.current, 'jeuAuNOzO1TudrGpv')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
             }
 
         };
 
   return (
     <>
-        <form className=" row needs-validation Regis_divForm " onSubmit={(e) =>onSubmit(e)}  >
+        <form className=" row needs-validation Regis_divForm " ref={form} onSubmit={(e) =>onSubmit(e)}  >
             <div className="col-md-12 mt-3 ">
                     <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
@@ -151,30 +139,30 @@ export const FormRegistration = () => {
                             Aforo limitado, se respetara estrictamente el orden de inscripción.  <a href="http://">Ver carta de cena</a>.
                         </p>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" checked={cena === 'si'} onChange={(t) => onCheckChangeValue('si',t)} name="cena" id="flexCheckDefault"/>
+                            <input className="form-check-input" type="checkbox" checked={cenaSi} onChange={onCheckChangeValue} name="cenaSi" id="flexCheckDefault"/>
                             <label className="form-check-label" htmlFor="flexCheckDefault">
                                 Si
                             </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="checkbox" checked={cena === 'no'} onChange={(t) => onCheckChangeValue('no',t)} name="cena" id="flexCheckChecked" />
+                            <input className="form-check-input" type="checkbox" checked={cenaNo} onChange={onCheckChangeValue} name="cenaNo" id="flexCheckChecked" />
                             <label className="form-check-label" htmlFor="flexCheckChecked">
                                 No
                             </label>
                         </div>
                     </div>
                     {
-                        cena==="si"
+                        cenaSi === true
                         ? <div className="col-md-12 mt-3">
                             <p>* Para la cena de gala, ¿que prefiere de plato principal?</p>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" checked={plato === 'carne'} onChange={(t) => onCheckChangeValue('carne',t)} name="plato" id="flexCheckDefault"/>
+                                <input className="form-check-input" type="checkbox" checked={carne} onChange={onCheckChangeValue} name="carne" id="flexCheckDefault"/>
                                 <label className="form-check-label" htmlFor="flexCheckDefault">
                                  Carne
                                 </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="checkbox" checked={plato === 'pescado'} onChange={(t) => onCheckChangeValue('pescado',t)} name="plato" id="flexCheckChecked" />
+                                <input className="form-check-input" type="checkbox" checked={pescado} onChange={onCheckChangeValue} name="pescado" id="flexCheckChecked" />
                                 <label className="form-check-label" htmlFor="flexCheckChecked">
                                     Pescado
                                 </label>
