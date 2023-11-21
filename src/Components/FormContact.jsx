@@ -1,9 +1,9 @@
 import { useRef } from "react"
 import { useForm } from "../hooks/useForm";
 import emailjs  from "@emailjs/browser";
-import EmailIcon from '@mui/icons-material/Email';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
+import gmail from '../assets/gmail.png';
+import wha from '../assets/whatsApp.png';
 
 export const FormContact = () => {
 
@@ -27,7 +27,7 @@ export const FormContact = () => {
 
   return (
     <>
-      <form className=" row needs-validation Regis_divForm" ref={form} onSubmit={(e) =>onSubmit(e)}>
+      <form className=" row needs-validation Regis_divForm text-center" ref={form} onSubmit={(e) =>onSubmit(e)}>
 
       <div className="col-md-3 mt-4">
         <div className="form-floating was-validated">
@@ -46,8 +46,8 @@ export const FormContact = () => {
       <div className="col-md-5 mt-4">
         {/* Contactos correo y wha */}
         <h4>Contactos:</h4>
-        <h5><EmailIcon/> <a>xvasamblealaringe@gmail.com</a></h5>
-        <h5><WhatsAppIcon/>    604 46 19 45</h5>
+        <h5><img src={gmail} alt="gmail" height={40}/> <a>xvasamblealaringe@gmail.com</a></h5>
+        <h5><img src={wha} alt="Whatsaap" height={40} />   604 46 19 45</h5>
       </div>
       <div className="col-md-7 mt-4">
         <div className="form-floating was-validated">
