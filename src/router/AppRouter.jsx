@@ -7,7 +7,7 @@ import { ContactPage, HomePage, InfoPage, MapPage, NewsPage, RegistrationPage } 
 
 export const AppRouter = () => {
   return (
-    <>
+    <div className="back">
         <Routes>
             <Route path="inscripcion" element={<RegistrationPage/>}/>
             <Route path="informacion" element={<InfoPage/>}/>
@@ -18,6 +18,6 @@ export const AppRouter = () => {
             <Route path="/" element={<HomePage/>}/>
             <Route path="/*" element={ <HomePage/>}/>
         </Routes>
-    </>
+    </div>
   )
 }

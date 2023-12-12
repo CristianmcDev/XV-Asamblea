@@ -7,10 +7,10 @@ export const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark text-center">
 
             <Link
-                className="navbar-brand"
+                className="navbar-brand px-3"
                 to="/"
             >
-                Principal
+                Inicio
             </Link>
 
             <div className="navbar-collapse">

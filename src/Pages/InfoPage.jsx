@@ -1,4 +1,5 @@
 import { Hoteles } from "../Components"
+import { Comidas } from "../Components/Comidas"
 
 export const InfoPage = () => {
   return (
@@ -10,6 +11,8 @@ export const InfoPage = () => {
       <hr />
 
       <Hoteles/>
+
+      <Comidas/>
     </>
   )
 }
