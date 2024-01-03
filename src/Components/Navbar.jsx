@@ -22,13 +22,6 @@ export const Navbar = () => {
                     >
                         Inscripciones
                     </NavLink>
-
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/noticias"
-                    >
-                        Noticias
-                    </NavLink>
                     <NavLink
                         className="nav-item nav-link"
                         to="/informacion"

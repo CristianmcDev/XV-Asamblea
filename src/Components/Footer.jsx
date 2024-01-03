@@ -17,13 +17,13 @@ export const Footer = () => {
 
           <a href="https://www.youtube.com/channel/UCwy77PQLPjylWiKZBs0I1pA" target="_blank" rel="noreferrer" className='mx-2'>
           <button type="button" className="iconfoo btn btn-info p-0">
-            <img src={yt} alt="FaceBook" height={40} />
+            <img src={yt} alt="Youtube" height={40} />
           </button>
           </a>
 
-          <a href="https://www.facebook.com/profile.php?id=100078777939889" target="_blank" rel="noreferrer" className='mx-2'>
+          <a href="https://www.instagram.com/ascolar_cordoba/" target="_blank" rel="noreferrer" className='mx-2'>
           <button type="button" className=" iconfoo btn btn-info p-0">
-            <img src={ig} alt="FaceBook" height={40} />
+            <img src={ig} alt="Instagram" height={40} />
           </button>
           </a>
 
