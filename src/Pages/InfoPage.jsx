@@ -1,5 +1,6 @@
 import { Hoteles } from "../Components"
 import { Comidas } from "../Components/Comidas"
+import { Programa } from "../Components/Programa"
 import { Visita } from "../Components/VIsita"
 
 export const InfoPage = () => {
@@ -10,12 +11,17 @@ export const InfoPage = () => {
         <h2 className="Regis_subtitle">INFORMACIÓN</h2>
       </div>
       <hr />
+      <div className="backgroundPages">
+        <div className="cardsPrinci">
+          {/* <Programa/> */}
 
-      <Hoteles/>
+          <Hoteles/>
 
-      <Comidas/>
+          <Comidas/>
 
-      <Visita/>
+          <Visita/>
+        </div>
+      </div>
     </>
   )
 }

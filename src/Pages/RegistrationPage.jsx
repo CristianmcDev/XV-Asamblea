@@ -8,7 +8,12 @@ export const RegistrationPage = () => {
         <h2 className="Regis_subtitle">INSCRIPCIÓN</h2>
       </div>
       <hr />
-      <FormRegistration/>
+      <div className="backgroundPages">
+        <div className="cardsPrinci">
+        <h1 className='text-center'><strong>PROXIMAMENTE</strong></h1>
+        {/* <FormRegistration/> */}
+        </div>
+      </div>
     </>
   )
 }

@@ -7,13 +7,13 @@ export const Hoteles = () => {
   return (
     <>
       <div className="Regis_divForm">
-        <h1 className="text-center">Hoteles</h1>
+        <h1 className="text-center">Hoteles Concertados</h1>
         <hr />
           {/* HOTEL SELU */}
         <div className="card mb-3">
           <div className="row g-0">
-            <div className="col-md-4">
-              <img src={selu} className="img-fluid rounded m-2" alt="Hotel Selu"/>
+            <div className="col-md-4 imgContainer">
+              <img src={selu} className="img-fluid m-2 rounded " alt="Hotel Selu"/>
             </div>
             <div className="col-md-8">
               <div className="card-body">
@@ -67,8 +67,8 @@ export const Hoteles = () => {
           {/* HOTEL Córdoba Center */}
         <div className="card mb-3">
           <div className="row g-0">
-            <div className="col-md-4">
-              <img src={center} className="img-fluid rounded m-2" alt="Hotel Córdoba Center"/>
+            <div className="col-md-4 imgContainer">
+              <img src={center} className="img-fluid m-2 rounded" alt="Hotel Córdoba Center"/>
             </div>
               <div className="col-md-8">
                 <div className="card-body pt-0">

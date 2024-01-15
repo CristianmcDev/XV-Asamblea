@@ -9,8 +9,11 @@ export const MapPage = () => {
         <h2 className="Regis_subtitle">MAPA</h2>
       </div>
       <hr />
-
-      <Mapas/>
+      <div className="backgroundPages">
+        <div className="cardsPrinci">
+          <Mapas/>
+        </div>
+      </div>
     </>
   )
 }

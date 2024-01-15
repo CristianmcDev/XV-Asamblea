@@ -3,6 +3,8 @@ import { initialForm } from "../data/initialRegis";
 import { useForm } from "../hooks/useForm";
 import { useRef } from "react";
 
+import cena from '../assets/MenuCena.png';
+
 
 export const FormRegistration = () => {
 
@@ -45,6 +47,11 @@ export const FormRegistration = () => {
   return (
     <>
         <form className=" row needs-validation Regis_divForm " ref={form} onSubmit={(e) =>onSubmit(e)}>
+
+            <div className="alert alert-danger m-2 text-center" role="alert">
+               <strong>RELLENAR FORMULARIO POR CADA ASISTENTE A LA ASAMBLEA</strong>
+            </div>
+
             <div className="col-md-12 mt-3 ">
                     <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
@@ -134,9 +141,10 @@ export const FormRegistration = () => {
                                                      {/* Cena de gala */}
 
                     <div className="col-md-12 mt-3">
-                        <p>* Inscripción para la cena de gala dia 25 de Abril, con precio 49€/persona, ingresar a cuenta: 561964968498498498 con el concepto: "Cena de gala" + el nombre.
-                            Aforo limitado, se respetara estrictamente el orden de inscripción.  <a href="http://">Ver carta de cena</a>.
+                        <p>* Inscripción para la cena de gala dia 25 de Abril, con precio 42€/persona, ingresar a cuenta: 561964968498498498 con el concepto: "Cena de gala" + su nombre.
+                            Aforo limitado, se respetara estrictamente el orden de inscripción.
                         </p>
+
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" checked={cenaSi} onChange={onCheckChangeValue} name="cenaSi" id="flexCheckDefault"/>
                             <label className="form-check-label" htmlFor="flexCheckDefault">
@@ -149,6 +157,10 @@ export const FormRegistration = () => {
                                 No
                             </label>
                         </div>
+                        <div className="menuCena">
+                <img src={cena} alt="Menu Cena Gala" className="img-fluid menuCenaImg" />
+                <h4 className="text-center">Precio: 42€/persona</h4>
+              </div>
                     </div>
                     {
                         cenaSi === true
@@ -235,12 +247,12 @@ export const FormRegistration = () => {
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" onChange={onCheckChange} name="grupoWha" checked={grupoWha} id="flexCheckDefault"/>
                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                    <p>Quiere que le informemos de nuevas actualizaciones sobre la asamblea, añadiendo su número de contacto al grupo de whatsapp</p>
+                    <p>Quiere que le informemos de nuevas actualizaciones sobre la asamblea, añadiendo su número de contacto al grupo de WhatsApp</p>
                     </label>
                 </div>
              </div>
              <div className="col-md-12 mt-3 ">
-                <button type="submit" className="btn btn-outline-primary m-2">Enviar inscrpción</button>
+                <button type="submit" className="btn btn-outline-primary m-2">Enviar inscripción</button>
                 <button type="button" className="btn btn-outline-danger" onClick={onResetForm}>Limpiar formulario</button>
             </div>
          </form>

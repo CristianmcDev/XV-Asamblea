@@ -12,31 +12,35 @@ export const Navbar = () => {
             >
                 Inicio
             </Link>
-
             <div className="navbar-collapse">
                 <div className="navbar-nav ">
-
                     <NavLink
-                        className="nav-item nav-link"
+                        className="nav-item nav-link navCss"
                         to="/inscripcion"
                     >
                         Inscripciones
                     </NavLink>
                     <NavLink
-                        className="nav-item nav-link"
+                        className="nav-item nav-link navCss"
                         to="/informacion"
                     >
-                        Información
+                        Asamblea
                     </NavLink>
 
                     <NavLink
-                        className="nav-item nav-link"
+                        className="nav-item nav-link navCss"
                         to="/mapa"
                     >
-                        Mapa
+                        Localizaciones
                     </NavLink>
                     <NavLink
-                        className="nav-item nav-link"
+                        className="nav-item nav-link navCss"
+                        to="/cordoba"
+                    >
+                        Córdoba
+                    </NavLink>
+                    <NavLink
+                        className="nav-item nav-link navCss"
                         to="/contacto"
                     >
                         Contacto

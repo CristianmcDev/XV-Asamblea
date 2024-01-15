@@ -1,4 +1,4 @@
-import accesok from '../assets/mapa_accesos.jpg';
+import accesok from '../assets/AccesoK.jpg';
 import HospiFacul from '../assets/Hospital-Facultad.png';
 
 export const Mapas = () => {
@@ -55,10 +55,10 @@ export const Mapas = () => {
 
             <h4 className="mt-5"><strong>- Asamblea</strong></h4>
             <div className='row'>
-                <div className="col-md-5">
+                <div className="col-md-4">
                     <img src={accesok} className="img-fluid rounded m-2" alt="Acceso K"/>
                 </div>
-                <div className='col-md-7 mt-2'>
+                <div className='col-md-8 mt-2'>
                     Las conferencias serán en el salon de actos del Hospital Reina Sofia, donde se accede desde el <strong>Acceso K</strong> <br />
                     Si quieres ver la ubicación desde Google Maps, Pulse <a href="https://maps.app.goo.gl/9D69WUnB92RdRSPw6" target="_blank" rel="noreferrer">Aqui</a>
 
@@ -76,14 +76,21 @@ export const Mapas = () => {
                 </div>
             </div>
 
-            <strong>AQUÍ HACER UN COLLAGE DE FOTO SATELITE Y ENTRADA JUNTAS</strong>
-
-            <img src={accesok} className="rounded m-2" height={250} alt="Acceso K"/>
 
             <h4 className="mt-5"><strong>- Almuzerzo Día 25</strong></h4>
 
-            <img src={HospiFacul} className="img-fluid rounded m-2" alt="Acceso K"/>
-
+            <div className='row'>
+                <div className='col-md-4'>
+                    <img src={HospiFacul} className="img-fluid rounded m-2" alt="Acceso K"/>
+                </div>
+                <div className='col-md-8'>
+                    <div className='mt-2'>
+                        <h4><strong>Cafetería Facultad de Medicina</strong></h4>
+                    </div>
+                    A 8 minutos andando desde el lugar de conferencias. <br />
+                    Se le dara un ticket a la entrada de la Asamblea para entregar en la cafetería.
+                </div>
+            </div>
 
 
         </div>
