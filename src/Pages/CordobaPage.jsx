@@ -5,7 +5,7 @@ export const CordobaPage = () => {
     <div>
       <div className="backgroundPages">
         <div className="cardsPrinci">
-        <h1 className="text-center"><strong>PROXIMAMENTE</strong></h1>
+        <h1 className="text-center proxima"><strong>PROXIMAMENTE</strong></h1>
         </div>
         </div>
     </div>

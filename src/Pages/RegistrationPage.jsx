@@ -10,8 +10,7 @@ export const RegistrationPage = () => {
       <hr />
       <div className="backgroundPages">
         <div className="cardsPrinci">
-        <h1 className='text-center'><strong>PROXIMAMENTE</strong></h1>
-        {/* <FormRegistration/> */}
+         <FormRegistration/>
         </div>
       </div>
     </>

@@ -4,7 +4,7 @@ import puente from "../assets/PuenteTituloG.png";
 export const HomePage = () => {
   return (
     <>
-        <img src={puente} alt="Puente Romano" className='img-fluid' width={10000}/>
+        <img src={puente} alt="Puente Romano" className='img-fluid animate__animated animate__fadeIn animate__slow' width={10000}/>
 
       <hr />
       <div className="backgroundPages">

@@ -3,13 +3,14 @@ import { initialForm } from "../data/initialRegis";
 import { useForm } from "../hooks/useForm";
 import { useRef } from "react";
 
-import cena from '../assets/MenuCena.png';
+import cenaPDF from '../assets/CenaGala.pdf';
+import protectPDF from '../assets/Aviso legal.pdf';
 
 
 export const FormRegistration = () => {
 
     const { onInputChange, onResetForm, onCheckChange, onCheckChangeValue, onCheckChangeAlergias, onCheckChangeOther, onInputChangeNumber,
-        nombre, apellidos, correo,correo2, telefono, dni, ciudad, org, hotel, dia25, dia26, cenaSi, cenaNo, carne, pescado, comentarios, noAlergias, otrasAlergias, leyProtect, grupoWha,}
+        nombre, apellidos, correo,correo2, telefono, ciudad, org, hotel, dia25, dia26, cenaSi, cenaNo, carne, pescado, comentarios, noAlergias, otrasAlergias, leyProtect, grupoWha,}
          = useForm(initialForm);
 
          const form = useRef();
@@ -88,18 +89,11 @@ export const FormRegistration = () => {
                     <div className="invalid-feedback">Debe confirmar el correo</div>
                 </div>
             </div>
-                                                        {/* Telefono + DNI + Ciudad */}
+                                                        {/* Telefono + Ciudad */}
             <div className="col-md-4 mt-4">
                 <div className="form-floating was-validated">
                     <input type="text" className="form-control" id="floatingInput" value={telefono} name="telefono" onChange={onInputChangeNumber} required/>
                     <label htmlFor="floatingInput">*Teléfono de contacto</label>
-                    <div className="invalid-feedback">Debe rellenar este campo</div>
-                </div>
-            </div>
-            <div className="col-md-4 mt-4">
-                <div className="form-floating was-validated">
-                    <input type="text" className="form-control" id="floatingInput" value={dni} name="dni" onChange={onInputChange} required/>
-                    <label htmlFor="floatingInput">*DNI</label>
                     <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
@@ -141,8 +135,8 @@ export const FormRegistration = () => {
                                                      {/* Cena de gala */}
 
                     <div className="col-md-12 mt-3">
-                        <p>* Inscripción para la cena de gala dia 25 de Abril, con precio 42€/persona, ingresar a cuenta: 561964968498498498 con el concepto: "Cena de gala" + su nombre.
-                            Aforo limitado, se respetara estrictamente el orden de inscripción.
+                        <p>* Inscripción para la cena de gala día 25 de Abril, con precio 42€/persona, ingresar a cuenta: ES63 0237 0158 5091 5212 0656 con el concepto: "Cena de gala" + su nombre.
+                            Aforo limitado, se respetará estrictamente el orden de inscripción. Fecha límite 21 Abril.  <a href={cenaPDF} target="_blank" rel="noreferrer">Ver Menú</a>
                         </p>
 
                         <div className="form-check">
@@ -157,10 +151,6 @@ export const FormRegistration = () => {
                                 No
                             </label>
                         </div>
-                        <div className="menuCena">
-                <img src={cena} alt="Menu Cena Gala" className="img-fluid menuCenaImg" />
-                <h4 className="text-center">Precio: 42€/persona</h4>
-              </div>
                     </div>
                     {
                         cenaSi === true
@@ -238,8 +228,7 @@ export const FormRegistration = () => {
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" onChange={onCheckChange} checked={leyProtect} name="leyProtect" id="flexCheckDefault" required/>
                     <label className="form-check-label" htmlFor="flexCheckDefault">
-                    <p>* Acepta la proteccion de datos bla bla bla aqui habra que poner el tipico texto de la ley sobre la proteccion de datos
-                    que solo seran datos privados y para llevar el control de inscripciones </p>
+                    <p>* Acepta la ley de privacidad y protección de datos <a href={protectPDF} target="_blank" rel="noreferrer">Ver Documento</a> </p>
                     </label>
                 </div>
              </div>

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 
 
 import './styles.css'
+import 'animate.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from './Components';
 import { AppRouter } from './router/AppRouter';

@@ -73,6 +73,14 @@ export const Mapas = () => {
                         ---- Si estas hospedado en el <strong> Hotel Selu,  Parada 250 - República Argentina</strong> <br />
                         <strong>Llegada en Parada 143 - Hospital Reina Sofía</strong>
 
+                    <div className='mt-4'><strong>EN TAXI</strong></div> <br />
+
+                    <strong>Dirección:</strong> Acceso K Hospital Reina Sofia - Av. Menéndez Pidal 722, Poniente Sur. <br />
+
+                    <strong>Teléfonos:</strong> 957 764 444 - 957 450 000 <br />
+                    <strong>Aplicación taxi:</strong> <a href="https://play.google.com/store/apps/details?id=es.sooft.pidetaxi&hl=es&pli=1">Android</a>  ------   <a href="https://apps.apple.com/es/app/pidetaxi-pedir-taxi-en-espa%C3%B1a/id737441460">Apple</a>
+
+
                 </div>
             </div>
 
@@ -88,7 +96,6 @@ export const Mapas = () => {
                         <h4><strong>Cafetería Facultad de Medicina</strong></h4>
                     </div>
                     A 8 minutos andando desde el lugar de conferencias. <br />
-                    Se le dara un ticket a la entrada de la Asamblea para entregar en la cafetería.
                 </div>
             </div>
 

@@ -54,6 +54,16 @@
     margin: 40px 40px;
     background-color: #adb2ba;
 }
+@media only screen and (max-width: 576px) {
+
+.Regis_divForm{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.alertCss{
+    text-align: justify;
+}
+}
 
 /* FIN Registration Page */
 
@@ -117,4 +127,9 @@
     background-color: #6ba4b8;
     font-weight: 700;
     color: white;
+}
+
+.proxima{
+    height: 300px;
+    align-content: center;
 }

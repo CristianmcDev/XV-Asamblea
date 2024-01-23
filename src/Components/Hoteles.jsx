@@ -44,9 +44,9 @@ export const Hoteles = () => {
               <iframe className=" maps " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2101.6955748829964!2d-4.784597943772909!3d37.88402623577674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf6232d7f4e1%3A0xaed9373ddbb0ceb7!2sHotel%20Selu!5e0!3m2!1ses-419!2ses!4v1702374673859!5m2!1ses-419!2ses" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
-          <div className="alert alert-warning m-2" role="alert">
+          <div className="alert alert-warning m-2 alertCss" role="alert">
 
-            <h4 className=" alert-heading">Procedimiento para reservar: <strong>SOLO VIA EMAIL</strong></h4>
+            <h4 className=" alert-heading">Procedimiento para reservar: <strong>SOLO VIA EMAIL</strong> --  Fecha límite: <strong>15-03-2024</strong></h4>
 
             <p>
               Indicar en el mail: <br />
@@ -80,7 +80,7 @@ export const Hoteles = () => {
             </div>
             <div className="alert alert-warning m-2" role="alert">
               <h4 className=" alert-heading">Procedimiento para reservar: <strong>VIA WEB Y TELÉFONO</strong></h4>
-              <p>- Via Web: con el código <strong>"AIL2404"</strong>  de un 10% de descuento sobre el precio, se podrá reserver a traves de la página web, pulsando <a href="https://www.hotelescenter.es/es/hotel-cordoba-center/" target="_blank" rel="noreferrer">aquí</a>. <br />
+              <p>- Via Web: con el código <strong>"AIL2404"</strong>  de un 10% de descuento sobre el precio, se podrá reservar a traves de la página web, pulsando <a href="https://www.hotelescenter.es/es/hotel-cordoba-center/" target="_blank" rel="noreferrer">aquí</a>. <br />
               - Via teléfono: +34 900 202 000 comentando el código de descuento <strong>"AIL2404"</strong>. <br />
               Fecha límite de reserva hasta dos semanas antes de la fecha de entrada, antes del <strong>01/Marzo/2024</strong> siempre que la disponibilidad del hotel así lo permita. <br />
               * La política de cancelación de las reservas se detallará por mail según cada caso en concreto, ya que dependerá del tipo de reserva y promoción elegida.

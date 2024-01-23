@@ -4,7 +4,6 @@ export const initialForm = {
     correo: "",
     correo2:"",
     telefono: "",
-    dni: "",
     ciudad: "",
     org: "",
     hotel: "",

@@ -5,8 +5,7 @@ export const Ascolar = () => {
     <div className="Regis_divForm">
         <h1 className="text-center">ASCOLAR</h1>
         <hr />
-        <img src={cartel} alt="Borrador Cartel" className='horario img-fluid' />
-
+          <img src={cartel} alt="Borrador Cartel" className='horario img-fluid animate__animated animate__fadeInLeft animate__slower' />
 
 
         {/* A la derecha, poner info de ascolar y de la asamblea */}
