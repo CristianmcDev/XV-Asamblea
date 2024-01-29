@@ -51,15 +51,15 @@ export const Hoteles = () => {
             <p>
               Indicar en el mail: <br />
 
-              1. - NOMBRE Y APELLIDOS DE LAS PERSONAS QUE SE ALOJAN. <br />
+             <strong>1. - NOMBRE Y APELLIDOS DE LAS PERSONAS QUE SE ALOJAN.</strong> <br />
 
-              2. - DÍA DE LLEGADA Y SALIDA DEL HOTEL, ASÍ COMO EL TIPO DE HABITACIÓN (DOBLE O INDIVIDUAL). <br />
+             <strong>2. - DÍA DE LLEGADA Y SALIDA DEL HOTEL, ASÍ COMO EL TIPO DE HABITACIÓN (DOBLE O INDIVIDUAL).</strong>  <br />
 
-              3. - NÚMERO DE TARJETA DE CRÉDITO CON FECHA DE CADUCIDAD COMO GARANTÍA: (se usara solo si el cliente no anulara y no se presentara en el hotel, en este caso se le cargará el importe de la primera noche, así como, si el cliente anula con menos de 24 horas de anterioridad, también se le hará el cargo de la primera noche).<br />
+             <strong>3. - NÚMERO DE TARJETA DE CRÉDITO CON FECHA DE CADUCIDAD COMO GARANTÍA:</strong> (se usara solo si el cliente no anulara y no se presentara en el hotel, en este caso se le cargará el importe de la primera noche, así como, si el cliente anula con menos de 24 horas de anterioridad, también se le hará el cargo de la primera noche).<br />
 
-              4. - TELÉFONO DE CONTACTO DURANTE EL VIAJE, POR SI HAY QUE CONTACTAR. <br />
+             <strong>4. - TELÉFONO DE CONTACTO DURANTE EL VIAJE, POR SI HAY QUE CONTACTAR.</strong> <br />
 
-              5.- LAS RESERVAS DEBEN SER DIRIGIDAS VÍA MAIL, CON EL ASUNTO "ASAMBLEA INTERNACIONAL DE LARINGECTOMIZADOS DE CORDOBA ”, al siguiente mail,  <strong>director@hotelselu.com</strong>, sino se hicieran por esta vía, o faltase algún dato de los anteriores, las reservas no serán válidas.
+             <strong>5.- LAS RESERVAS DEBEN SER DIRIGIDAS VÍA MAIL</strong>, CON EL ASUNTO "ASAMBLEA INTERNACIONAL DE LARINGECTOMIZADOS DE CORDOBA ”, al siguiente mail,  <strong>director@hotelselu.com</strong>, sino se hicieran por esta vía, o faltase algún dato de los anteriores, las reservas no serán válidas.
             </p>
           </div>
         </div>

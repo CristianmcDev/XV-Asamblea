@@ -63,12 +63,12 @@ export const Mapas = () => {
                     Si quieres ver la ubicación desde Google Maps, Pulse <a href="https://maps.app.goo.gl/9D69WUnB92RdRSPw6" target="_blank" rel="noreferrer">Aqui</a>
 
                     <div className='mt-4'><strong>EN AUTOBUS</strong></div> <br />
-                        - Cogiendo el Autobus Linea 5. Pulsa <a href="https://aucorsa.es/linea/5/" target="_blank" rel="noreferrer">aquí</a> para ver el recorrido y horarios. <br />
+                        - Cogiendo el Autobus Línea 5. Pulsa <a href="https://aucorsa.es/linea/5/" target="_blank" rel="noreferrer">aquí</a> para ver el recorrido y horarios. <br />
                         ---- Si estas hospedado en el <strong> Hotel Center Córdoba,  Parada 51 - Avenida América</strong> <br />
                         ---- Si estas hospedado en el <strong> Hotel Selu,  Parada 250 - República Argentina</strong><br />
                         <strong>Llegada en Parada 144 - Hospital Reina Sofía</strong>
                         <hr />
-                        - Cogiendo el Autobus Linea 2. Pulsa <a href="https://aucorsa.es/linea/2/" target="_blank" rel="noreferrer">aquí</a> para ver el recorrido y horarios. <br />
+                        - Cogiendo el Autobus Línea 2. Pulsa <a href="https://aucorsa.es/linea/2/" target="_blank" rel="noreferrer">aquí</a> para ver el recorrido y horarios. <br />
                         ---- Si estas hospedado en el <strong> Hotel Center Córdoba,  Parada 68 - Ronda Tejares (Gran Capitán)</strong> <br />
                         ---- Si estas hospedado en el <strong> Hotel Selu,  Parada 250 - República Argentina</strong> <br />
                         <strong>Llegada en Parada 143 - Hospital Reina Sofía</strong>

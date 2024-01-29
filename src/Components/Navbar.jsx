@@ -7,7 +7,7 @@ export const Navbar = () => {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark text-center">
 
             <Link
-                className="navbar-brand px-3"
+                className="navbar-brand px-3 text-center"
                 to="/"
             >
                 Inicio
