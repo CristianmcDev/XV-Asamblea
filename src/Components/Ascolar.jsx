@@ -4,6 +4,10 @@ import logoAGS from '../assets/LogoAGS.jpg';
 import logoJunta from '../assets/LogoJunta.jpg';
 import logoFepa from '../assets/LogoFepa.jpg';
 import logoAtos from '../assets/LogoAtos.jpg';
+import logoUC from '../assets/LogoUC.jpg';
+import logoAyCo from '../assets/LogoAyCo.jpg';
+import logoAyCa from '../assets/LogoAyCa.jpg';
+
 
 export const Ascolar = () => {
   return (
@@ -39,16 +43,27 @@ export const Ascolar = () => {
               <img src={logoHURS} alt="Logo HURS" className='imgLogo' />
               </div>
             <div className="col-md-2">
-              <img src={logoAGS} alt="Logo HURS" className='imgLogo' />
+              <img src={logoAGS} alt="Logo AGS" className='imgLogo' />
             </div>
             <div className="col-md-3">
-              <img src={logoJunta} alt="Logo HURS" className='imgLogo' />
+              <img src={logoJunta} alt="Logo Junta de Andalucia" className='imgLogo' />
             </div>
             <div className="col-md-2">
-              <img src={logoFepa} alt="Logo HURS" className='imgLogo' />
+              <img src={logoFepa} alt="Logo Fepamic" className='imgLogo' />
             </div>
             <div className="col-md-2">
-              <img src={logoAtos} alt="Logo HURS" className='imgLogo' />
+              <img src={logoAtos} alt="Logo Atos" className='imgLogo' />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-2">
+              <img src={logoUC} alt="Logo Universidad de Córdoba" className='imgLogo' />
+              </div>
+            <div className="col-md-3">
+              <img src={logoAyCo} alt="Logo Ayuntamiento Córdoba" className='imgLogo' />
+            </div>
+            <div className="col-md-4">
+              <img src={logoAyCa} alt="Logo Ayuntamiento Cabra" className='imgLogo' />
             </div>
           </div>
         </div>

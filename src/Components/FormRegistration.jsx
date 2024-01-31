@@ -136,7 +136,7 @@ export const FormRegistration = () => {
 
                     <div className="col-md-12 mt-3">
                         <p>* Inscripción para la cena de gala día 25 de Abril, con precio 42€/persona, ingresar a cuenta: ES63 0237 0158 5091 5212 0656 con el concepto: "Cena de gala" + su nombre.
-                            Aforo limitado, se respetará estrictamente el orden de inscripción. Fecha límite 21 Abril.  <a href={cenaPDF} target="_blank" rel="noreferrer">Ver Menú</a>
+                           Beneficiario: ASCOLAR -- Aforo limitado, se respetará estrictamente el orden de inscripción. Fecha límite 21 Abril.  <a href={cenaPDF} target="_blank" rel="noreferrer">Ver Menú</a>
                         </p>
 
                         <div className="form-check">

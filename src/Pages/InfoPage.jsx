@@ -14,6 +14,7 @@ export const InfoPage = () => {
       <div className="backgroundPages">
         <div className="cardsPrinci">
           {/* <Programa/> */}
+          <Programa/>
 
           <Hoteles/>
 
