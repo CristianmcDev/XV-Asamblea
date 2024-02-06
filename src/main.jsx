@@ -8,7 +8,7 @@ import 'animate.css';
 import { BrowserRouter } from 'react-router-dom';
 import { Navbar } from './Components';
 import { AppRouter } from './router/AppRouter';
-import { Footer } from './Components/footer';
+import { Footer } from './Components';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

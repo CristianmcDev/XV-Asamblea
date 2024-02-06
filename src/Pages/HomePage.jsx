@@ -9,9 +9,9 @@ export const HomePage = () => {
       <hr />
       <div className="backgroundPages">
         <div className="cardsPrinci">
-      {/* <div className="alert alert-info inscribete" role="alert">
+       <div className="alert alert-info inscribete" role="alert">
         <a href="/inscripcion" className="alert-link">¡¡INSCRIBETE YA!!</a>
-      </div> */}
+      </div>
       <Ascolar/>
 
       </div>

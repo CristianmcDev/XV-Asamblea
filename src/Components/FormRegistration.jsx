@@ -21,11 +21,6 @@ export const FormRegistration = () => {
 
         const onSubmit = (e) => {
 
-            if (correo !== correo2) {
-                alert("El correo de confirmación no coincide con el primer correo");
-                e.preventDefault();
-
-            }else
             if(!dia25 && !dia26){
                 alert("Tienes que seleccionar al menos un dia de aistencia")
                 e.preventDefault();
@@ -73,18 +68,17 @@ export const FormRegistration = () => {
                 </div>
             </div>
                                                         {/* Correo */}
-
+                <p>Correo para poder confirmar la inscripción, No es obligatorio</p>
             <div className="col-md-6 mt-4">
                 <div className="form-floating was-validated">
-                    <input type="email" className="form-control " id="floatingInput" value={correo} name="correo" onChange={onInputChange} required/>
+                    <input type="email" className="form-control " id="floatingInput" value={correo} name="correo" onChange={onInputChange}/>
                     <label htmlFor="floatingInput">*Correo electrónico</label>
-                    <div className="valid-feedback">Todo bien</div>
                     <div className="invalid-feedback">Debe rellenar este campo</div>
                 </div>
             </div>
             <div className="col-md-6 mt-4">
                 <div className="form-floating was-validated">
-                    <input type="email" className="form-control" id="floatingInput" value={correo2} onPaste={handlechangeDisabled} name="correo2" onChange={onInputChange} required/>
+                    <input type="email" className="form-control" id="floatingInput" value={correo2} onPaste={handlechangeDisabled} name="correo2" onChange={onInputChange}/>
                     <label htmlFor="floatingInput">*Repetir correo</label>
                     <div className="invalid-feedback">Debe confirmar el correo</div>
                 </div>

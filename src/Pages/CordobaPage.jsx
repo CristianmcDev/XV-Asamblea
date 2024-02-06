@@ -1,3 +1,4 @@
+import { Cordoba } from "../Components"
 
 
 export const CordobaPage = () => {
@@ -5,7 +6,7 @@ export const CordobaPage = () => {
     <div>
       <div className="backgroundPages">
         <div className="cardsPrinci">
-        <h1 className="text-center proxima"><strong>PROXIMAMENTE</strong></h1>
+          <Cordoba/>
         </div>
         </div>
     </div>

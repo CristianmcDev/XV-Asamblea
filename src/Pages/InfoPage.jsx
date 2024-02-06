@@ -1,7 +1,5 @@
-import { Hoteles } from "../Components"
-import { Comidas } from "../Components/Comidas"
-import { Programa } from "../Components/Programa"
-import { Visita } from "../Components/VIsita"
+import { Hoteles, Comidas, Programa, Visita } from "../Components"
+
 
 export const InfoPage = () => {
   return (
@@ -13,7 +11,6 @@ export const InfoPage = () => {
       <hr />
       <div className="backgroundPages">
         <div className="cardsPrinci">
-          {/* <Programa/> */}
           <Programa/>
 
           <Hoteles/>
