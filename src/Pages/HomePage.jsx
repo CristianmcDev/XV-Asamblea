@@ -1,5 +1,6 @@
 import { Ascolar } from "../Components/Ascolar"
 import puente from "../assets/PuenteTituloG.png";
+import { NavLink } from 'react-router-dom';
 
 export const HomePage = () => {
   return (
@@ -10,7 +11,10 @@ export const HomePage = () => {
       <div className="backgroundPages">
         <div className="cardsPrinci">
        <div className="alert alert-info inscribete" role="alert">
-        <a href="/inscripcion" className="alert-link">¡¡INSCRIBETE YA!!</a>
+       <NavLink
+                        className="nav-item nav-link inscribete"
+                        to="/inscripcion"
+                    > INSCRIBETE YA¡¡</NavLink>
       </div>
       <Ascolar/>
 

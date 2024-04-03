@@ -41,6 +41,12 @@ export const Navbar = () => {
                     </NavLink>
                     <NavLink
                         className="nav-item nav-link navCss"
+                        to="/fotos"
+                    >
+                        Galeria
+                    </NavLink>
+                    <NavLink
+                        className="nav-item nav-link navCss"
                         to="/contacto"
                     >
                         Contacto

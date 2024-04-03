@@ -1,4 +1,7 @@
-import horario from '../assets/Borrador_Horario.jpg'
+import horarioPDF from '../assets/Programa.pdf';
+import horario1 from '../assets/Programa1.png';
+import horario2 from '../assets/Programa2.png';
+
 
 export const Programa = () => {
   return (
@@ -8,12 +11,17 @@ export const Programa = () => {
             <h1 className="text-center">PROGRAMA</h1>
             <hr />
 
-            <h2 className='text-center'><strong>El programa se publicará próximamente</strong></h2>
-              <h3>La hora para la Recepción de credenciales, será a las <strong>8:15</strong>, por el acceso K.</h3><br />
-              <h3>Y a las 9:00 se dará comienzo a la inauguración de la Asamblea.</h3>
-
-            {/* <img src={horario} alt="Borrador horario" className='horario img-fluid' /> */}
-
+            <h3 className='text-center'>
+              <a href={horarioPDF}>Ver aquí en PDF</a>
+            </h3>
+            <div className="programa row g-0">
+              <div className='col-md-6'>
+                <img src={horario1} alt="Programa preliminar" className="img-fluid programaImg" />
+              </div>
+              <div className='col-md-6'>
+                <img src={horario2} alt="Programa preliminar" className="img-fluid programaImg" />
+              </div>
+            </div>
         </div>
     </>
   )

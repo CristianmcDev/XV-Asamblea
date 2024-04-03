@@ -18,33 +18,12 @@ export const Hoteles = () => {
             <div className="col-md-8">
               <div className="card-body">
                 <h2 className="card-title">Hotel Selu <img src={star} alt="3Star" width={50}/>   <a href="https://www.hotelselu.com/" target="_blank" rel="noreferrer" style={{fontSize: 25}}>Página Web</a></h2>
-                <h5><strong>Precios por noche:</strong></h5>
-                <table className="table mb-0">
-                  <tbody>
-                    <tr>
-                      <td>- Habitación doble</td>
-                      <td className="text-end">90€</td>
-                    </tr>
-                    <tr>
-                      <td>- Habitación doble + desayuno</td>
-                      <td className="text-end">110€</td>
-                    </tr>
-                    <tr>
-                      <td>- Habitación individual</td>
-                      <td className="text-end">70€</td>
-                    </tr>
-                    <tr>
-                      <td>- Habitación individual + desayuno</td>
-                      <td className="text-end">80€</td>
-                    </tr>
-                  </tbody>
-                </table>
                 <h5><strong>Correo electrónico</strong>:  director@hotelselu.com</h5>
               </div>
               <iframe className=" maps " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2101.6955748829964!2d-4.784597943772909!3d37.88402623577674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf6232d7f4e1%3A0xaed9373ddbb0ceb7!2sHotel%20Selu!5e0!3m2!1ses-419!2ses!4v1702374673859!5m2!1ses-419!2ses" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
-          <div className="alert alert-warning m-2 alertCss" role="alert">
+          {/* <div className="alert alert-warning m-2 alertCss" role="alert">
 
             <h4 className=" alert-heading">Procedimiento para reservar: <strong>SOLO VIA EMAIL</strong> --  Fecha límite: <strong>15-03-2024</strong></h4>
 
@@ -61,7 +40,7 @@ export const Hoteles = () => {
 
              <strong>5.- LAS RESERVAS DEBEN SER DIRIGIDAS VÍA MAIL</strong>, CON EL ASUNTO "ASAMBLEA INTERNACIONAL DE LARINGECTOMIZADOS DE CORDOBA ”, al siguiente mail,  <strong>director@hotelselu.com</strong>, sino se hicieran por esta vía, o faltase algún dato de los anteriores, las reservas no serán válidas.
             </p>
-          </div>
+          </div> */}
         </div>
 
           {/* HOTEL Córdoba Center */}
@@ -78,14 +57,14 @@ export const Hoteles = () => {
                 </div>
               </div>
             </div>
-            <div className="alert alert-warning m-2" role="alert">
+            {/* <div className="alert alert-warning m-2" role="alert">
               <h4 className=" alert-heading">Procedimiento para reservar: <strong>VIA WEB Y TELÉFONO</strong></h4>
               <p>- Via Web: con el código <strong>"AIL2404"</strong>  de un 10% de descuento sobre el precio, se podrá reservar a traves de la página web, pulsando <a href="https://www.hotelescenter.es/es/hotel-cordoba-center/" target="_blank" rel="noreferrer">aquí</a>. <br />
               - Via teléfono: +34 900 202 000 comentando el código de descuento <strong>"AIL2404"</strong>. <br />
               Fecha límite de reserva hasta dos semanas antes de la fecha de entrada, antes del <strong>01/Marzo/2024</strong> siempre que la disponibilidad del hotel así lo permita. <br />
               * La política de cancelación de las reservas se detallará por mail según cada caso en concreto, ya que dependerá del tipo de reserva y promoción elegida.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
     </>

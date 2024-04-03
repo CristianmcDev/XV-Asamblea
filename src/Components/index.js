@@ -9,6 +9,7 @@ export * from './Footer';
 export * from './Mapas';
 export * from './Programa';
 export * from './Visita';
+export * from './Galery';
 
 
 

@@ -13,10 +13,6 @@ export const Cordoba = () => {
       <h1 className="text-center">Córdoba</h1>
       <hr />
       <h3>PDF Con todos los horarios y Punto de interes de Córdoba <a href="https://www.turismodecordoba.org/repositorio/2020/202010160837150000001602830235.2683.pdf?cache=1602830235.4002">Aquí</a></h3>
-      <div className="alert alert-danger m-2 alertCss" role="alert">
-        <h4>Estamos intentando conseguir alguna visita a algunos de estos monumentos.
-        </h4>
-      </div>
         {/* Mezquita */}
 
         <div className="card mb-3">
