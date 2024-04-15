@@ -18,9 +18,27 @@ export const Comidas = () => {
           </div>
           <div className="col-md-8">
             <div className="card-body">
+              <h2 className="text-center text-decoration-underline">Coffee Break día 25</h2>
+              <h2 className="card-title">Cafetería Facultad de Medicina</h2>
+              <ul>
+                <li><strong>Pastas de té</strong></li>
+                <li><strong>BEBIDA:</strong></li>
+                <li>Café ecológico 100% natural</li>
+                <li>Cacao instantáneo ecológico</li>
+                <li>Infusiones</li>
+                <li>Agua mineral</li>
+                <li>Selección especial de tés: -Chái con especias ecológico -Tónico con guaraná ecológico</li>
+              </ul>
+
+              <hr />
               <h2 className="text-center text-decoration-underline">Almuerzo día 25</h2>
               <h2 className="card-title">Cafetería Facultad de Medicina</h2>
-              <h5><strong>Menú</strong> (Se publicara una semana antes)</h5>
+              <h5><strong>Menú:</strong></h5>
+              <h5>
+                  1º Ensalada de pasta. <br />
+                  2º Albóndigas en salsa con patatas. <br />
+                  Y Bebida.
+              </h5>
             </div>
             <iframe className=" maps mb-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1081.9004669835879!2d-4.796502043056768!3d37.866296285807564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6d20b954f37ce1%3A0x64cc9a1054232faa!2sFacultad%20de%20Medicina%20y%20Enfermer%C3%ADa%20(Universidad%20de%20C%C3%B3rdoba)!5e0!3m2!1ses-419!2ses!4v1702378049223!5m2!1ses-419!2ses" width="300" height="200" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>

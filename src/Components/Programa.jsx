@@ -22,6 +22,7 @@ export const Programa = () => {
                 <img src={horario2} alt="Programa preliminar" className="img-fluid programaImg" />
               </div>
             </div>
+            <h3>Si tienes alguna pregunta para hacerla en la Asamblea, haznola saber por nuestro Whatsapp o a nuestro correo electronico, en la pestaña de contacto.</h3>
         </div>
     </>
   )

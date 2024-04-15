@@ -1,4 +1,4 @@
-import cartel from '../assets/cartel.jpg';
+import cartel from '../assets/cartel.png';
 import logoHURS from '../assets/LogoHURS.jpg';
 import logoAGS from '../assets/LogoAGS.jpg';
 import logoJunta from '../assets/LogoJunta.jpg';
@@ -7,6 +7,9 @@ import logoAtos from '../assets/LogoAtos.jpg';
 import logoUC from '../assets/LogoUC.jpg';
 import logoAyCo from '../assets/LogoAyCo.jpg';
 import logoAyCa from '../assets/LogoAyCa.jpg';
+import logoDipu from '../assets/logoDipu.png';
+import logoTV from '../assets/logoTv.png';
+import logoCortes from '../assets/logoCortes.png';
 
 
 export const Ascolar = () => {
@@ -42,7 +45,7 @@ export const Ascolar = () => {
             <div className="col-md-3">
               <img src={logoHURS} alt="Logo HURS" className='imgLogo' />
               </div>
-            <div className="col-md-2">
+            <div className="col-md-1">
               <img src={logoAGS} alt="Logo AGS" className='imgLogo' />
             </div>
             <div className="col-md-3">
@@ -56,6 +59,9 @@ export const Ascolar = () => {
             </div>
           </div>
           <div className="row">
+          <div className="col-md-2">
+              <img src={logoDipu} alt="Logo Diputación de Córdoba" className='imgLogo' />
+              </div>
             <div className="col-md-2">
               <img src={logoUC} alt="Logo Universidad de Córdoba" className='imgLogo' />
               </div>
@@ -65,6 +71,16 @@ export const Ascolar = () => {
             <div className="col-md-4">
               <img src={logoAyCa} alt="Logo Ayuntamiento Cabra" className='imgLogo' />
             </div>
+          </div>
+
+          <div className="row">
+          <div className="col-md-4"> </div>
+          <div className="col-md-1">
+              <img src={logoTV} alt="Logo TV Aguilar" className='imgLogo' />
+              </div>
+            <div className="col-md-2">
+              <img src={logoCortes} alt="Logo Libreria Cortes" className='imgLogo' />
+              </div>
           </div>
         </div>
 
